@@ -10,9 +10,9 @@ window_width = 560
 window_height = 560
 
 # Set grid dimensions
-grid_size = 32
+grid_size = 64
 cell_size = window_width // grid_size
-pen_draw_size = 2  # Increase this value to increase the pen draw size
+pen_draw_size = 5  # Increase this value to increase the pen draw size
 
 # Set colors
 BLACK = (0, 0, 0)
