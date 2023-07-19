@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(64, 1fr);
+            grid-template-rows: repeat(64, 1fr);
+            width: 560px;
+            height: 560px;
+        }
+
+        .cell {
+            background-color: black;
+            border: 1px solid gray;
+            width: 8px;
+            height: 8px;
+        }
+
+        .cell.active {
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        {% for row in grid %}
+            {% for value in row %}
+                <div class="cell {% if value == 1 %}active{% endif %}"></div>
+            {% endfor %}
+        {% endfor %}
+    </div>
+</body>
+</html>
