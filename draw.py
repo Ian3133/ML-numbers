@@ -23,7 +23,7 @@ grid = np.zeros((grid_size, grid_size), dtype=int)
 
 # Set up the window
 window = pygame.display.set_mode((window_width, window_height))
-pygame.display.set_caption("Draw on 28x28 Grid")
+pygame.display.set_caption("Draw a number 0-9")
 window.fill(BLACK)
 
 # Flag to indicate if drawing is active
@@ -66,8 +66,8 @@ image = Image.fromarray(grid.astype(np.uint8) * 255, mode='L')
 image.save('drawn_grid.png')
 
 # Print the drawn grid
-print("Drawn Grid:")
-print(grid)
+# print("Drawn Grid:")
+# print(grid)
 
 # Quit Pygame
 pygame.quit()
