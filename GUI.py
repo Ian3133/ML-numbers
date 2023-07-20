@@ -27,20 +27,19 @@ def refresh_image():
     # Update the image on the label
     image_label.configure(image=photo_image)
     image_label.image = photo_image  # Prevent garbage collection
-    additional_text = "our prediction is: " + str(predict())
+  
+    additional_text = "prediction: " + str(predict()) + "           "
     
     
-    additional_label = tk.Label(root, text=additional_text)
+    additional_label = tk.Label(root, text=additional_text, font=("Helvetica", 16))
     additional_label.grid(row=2, column=2, padx=20, pady=10, sticky="e")  # Place the label to the right of the image
 
 
 def display_gui():
     # Code to display the GUI elements
     image_path = 'drawn_grid.png'  
-    title_text = "Example Text mach 2"  # Replace with your variable value
-    description_text = """words here but also here, didnt think i could pull that off did you??!!!?!?!????!!?
-    other words here for good measure and yet again here but not ____ because i said so.
-    bye. three more words"""
+    title_text = "ML Number Project"  # Replace with your variable value
+    description_text = """ details about the poject and where i got the date set. also porlbem with ---- but sloved using -----, try it out below   """
 
     # Creating a label to display title text with a larger font size
     title_label = tk.Label(root, text=title_text, font=("Helvetica", 24, "bold"))
@@ -70,14 +69,14 @@ def display_gui():
 
     # Adding some text to the right of the image and above the button
     
-    additional_text = "our prediction is: " + str(predict())
+    additional_text = "prediction: " + str(predict()) + "           "
     
     
-    additional_label = tk.Label(root, text=additional_text)
+    additional_label = tk.Label(root, text=additional_text, font=("Helvetica", 16))
     additional_label.grid(row=2, column=2, padx=20, pady=10, sticky="e")  # Place the label to the right of the image
 
     # Creating a button to open the Pygame file
-    button = tk.Button(root, text="Open Pygame File", command=open_pygame_file)
+    button = tk.Button(root, text="Draw Number 0-9", command=open_pygame_file)
     # Calculate the coordinates to center the button on the image
     button_x = 20 + (300 - button.winfo_reqwidth()) / 2
     button_y = 10 + (400 - button.winfo_reqheight()) / 2
