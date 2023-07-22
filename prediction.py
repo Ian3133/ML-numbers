@@ -5,7 +5,7 @@ import tensorflow as tf
 
 def predict():
     # Load the model from the file
-    loaded_model = tf.saved_model.load("nn_number_model_mach_2")
+    loaded_model = tf.saved_model.load("nn_mach_3")
 
     image = Image.open('drawn_grid.png')
     image_array = np.array(image)  # Convert the image to a NumPy array
